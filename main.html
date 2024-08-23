@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function comp(){
+            const pass = document.getElementById("pass");
+            const Cpass = document.getElementById("Cpass");
+            console.log(pass.value+"  "+Cpass.value);
+            if(pass.value !== Cpass.value){
+                mensajeError.textContent = "*Passwords do not match";
+                setTimeout(() => {
+                mensajeError.textContent = "";
+                document.getElementById('pass').value = "";
+                document.getElementById('Cpass').value = "";
+                }, 3000); 
+            }else{
+                pass.setCustomValidity("");
+                Cpass.setCustomValidity("");
+            }
+        }
+    </script>
+    <title>Sign-up Form</title>
+</head>
+<body>
+    <div class="main-cont">
+        <div class="cont-left">
+        
+            <img src="back.jpg" alt="Plants">
+        
+        <div class="logo">
+            <img src="odin-lined.png" alt="Odin">
+            <p>ODIN</p>
+        </div>
+    </div>
+
+
+    <div class="cont-right">
+        <div class="textUP">
+            <p>
+                This is not a real online service! You know you need something
+                like this in your life to help you to realize your deepest dreams. <br>
+                Sign up <i>now</i> to get started.
+            </p>
+            <p>You <i>know</i> you want to.</p>
+        </div>
+        <div class="login">
+            <p>Let's do this!</p>
+            <form>
+                <div class="row">
+                    <div class="group">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" id="Fname" name="Fname">
+                    </div>
+                    <div class="group">
+                        <label for="lname">LAST NAME</label>
+                        <input type="text" id="Lname" name="Lname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="group">
+                        <label for="mail">EMAIL</label>
+                        <input type="email" id="mail" name="mail" value="@" required>
+                    </div>
+                    <div class="group">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="number" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="group">
+                        <label for="passw">PASSWORD</label>
+                        <input type="password" id="pass" name="pass" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{4,}$" required>
+                        <p id="mensajeError" class="mensaje"></p>
+                    </div>
+                    <div class="group">
+                        <label for="cpassw">CONFIRM PASSWORD</label>
+                        <input type="password" id="Cpass" name="Cpass" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{4,}$" required onblur="comp()">    
+                    </div>
+                </div>
+
+                
+                
+        </div>
+        <div class="textDOWN">
+            <input type="submit" value="Create Account" class="button">
+        </form>
+        <p>Already have and account?  <a>Log in</a></p>
+        </div>  
+    </div>
+    </div>
+</body>
+</html>

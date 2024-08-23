@@ -1,0 +1,191 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+}
+
+.main-cont {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(235, 235, 235);
+    overflow: hidden;
+}
+
+.cont-left {
+    overflow: hidden;
+    width: 35%;
+    position: relative;
+    
+    
+}
+
+.cont-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.cont-left .logo{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgb(39, 39, 39, 0.7) 100%);
+    height: 20%;
+    position: relative;
+    width: 100%;
+    top: 20%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.cont-left .logo img{
+    max-width: 20%;
+    position: absolute;
+    object-fit: contain;
+    left: 20%;
+}
+
+@font-face {
+    font-family: 'Norse Bold'; 
+    src: url('Norse-Bold.otf');
+}
+
+.cont-left .logo p{
+    font-family: 'Norse Bold', sans-serif;
+    position: absolute;
+    color: white;
+    left: 41%;
+    font-size: 6vw;
+}
+
+.cont-right {
+    overflow: auto;
+    width: auto;
+    position: relative;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 1.5vw;
+    box-sizing: border-box;
+}
+
+.cont-right .textUP{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 10%;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 0; 
+}
+
+.cont-right .textDOWN{
+    margin-bottom: 1vw;
+    margin-left: 5%;
+    margin-right: 10%;
+    padding-bottom: 0;
+}
+
+.cont-right .textDOWN .button{
+    margin-top: 3%;
+    margin-bottom: 0;
+    background-color: rgb(20, 104, 20);
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cont-right .textDOWN .button:hover{
+    cursor: pointer;
+    background-color: rgb(101, 199, 101);
+}
+
+.cont-right a{
+    color: rgb(20, 104, 20);
+}
+
+.cont-right a:hover{
+    cursor: pointer;
+    color: rgb(101, 199, 101);
+}
+
+.cont-right .login{
+    background-color: rgb(255, 255, 255);
+    padding-top: 2%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    box-shadow: 0px 10px 5px rgb(151, 151, 151);
+}
+
+.cont-right .login p{
+    font-weight: bold;
+}
+
+.cont-right .login .row{
+    display: flex;
+}
+
+.cont-right .login .group{
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 7vw;
+}
+
+.cont-right .login input{
+    width: 18.5vw;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.cont-right .login input:focus{
+    border: 1px solid #00c3ff;
+    border-color: #00c3ff;
+    box-shadow: 3px 3px 5px rgb(92, 103, 155);
+    outline: none !important;
+}
+
+.cont-right .login input[type=password]:invalid{
+    border: 1px solid #ff0000;
+    border-color: #ff0000;
+    box-shadow: 3px 3px 5px #772a2a;
+    outline: none !important;
+}
+.cont-right .login input[type=password]:valid{
+    border: 1px solid #00ff0d;
+    border-color: #00ff0d;
+    box-shadow: 3px 3px 5px #009407;
+    outline: none !important;
+}
+
+.cont-right .login label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.cont-right .login .mensaje{
+    color: #ff0000;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-weight: normal;
+
+}
